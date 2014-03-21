@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook version='8.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 8100.13.1231.1350                -->
+  <preferences>
+  </preferences>
+  <datasources>
+    <datasource inline='true' name='_WWReachv8' version='8.2'>
+      <connection authentication='sspi' class='sqlserver' dbname='WWReach' server='.'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[FactDailyResponse].[Vendor_Key]'>
+              </expression>
+              <expression op='[DimVendor].[Vendor_Key]'>
+              </expression>
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[FactDailyResponse].[Response_Type_Key]'>
+                </expression>
+                <expression op='[DimResponseType].[Response_Type_Key]'>
+                </expression>
+              </expression>
+            </clause>
+            <relation join='inner' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[FactDailyResponse].[Placement_Key]'>
+                  </expression>
+                  <expression op='[DimPlacement].[Placement_Key]'>
+                  </expression>
+                </expression>
+              </clause>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[FactDailyResponse].[Event_Key]'>
+                    </expression>
+                    <expression op='[DimEvent].[Event_Key]'>
+                    </expression>
+                  </expression>
+                </clause>
+                <relation join='inner' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[FactDailyResponse].[Date_Key]'>
+                      </expression>
+                      <expression op='[DimDate].[Date_Key]'>
+                      </expression>
+                    </expression>
+                  </clause>
+                  <relation join='inner' type='join'>
+                    <clause type='join'>
+                      <expression op='='>
+                        <expression op='[FactDailyResponse].[Creative_Key]'>
+                        </expression>
+                        <expression op='[DimCreative].[Creative_Key]'>
+                        </expression>
+                      </expression>
+                    </clause>
+                    <relation join='inner' type='join'>
+                      <clause type='join'>
+                        <expression op='='>
+                          <expression op='[FactDailyResponse].[Client_Key]'>
+                          </expression>
+                          <expression op='[DimClient].[Client_Key]'>
+                          </expression>
+                        </expression>
+                      </clause>
+                      <relation join='inner' type='join'>
+                        <clause type='join'>
+                          <expression op='='>
+                            <expression op='[FactDailyResponse].[Campaign_Key]'>
+                            </expression>
+                            <expression op='[DimCampaign].[Campaign_Key]'>
+                            </expression>
+                          </expression>
+                        </clause>
+                        <relation join='inner' type='join'>
+                          <clause type='join'>
+                            <expression op='='>
+                              <expression op='[FactDailyResponse].[Ad_Key]'>
+                              </expression>
+                              <expression op='[DimAd].[Ad_Key]'>
+                              </expression>
+                            </expression>
+                          </clause>
+                          <relation name='FactDailyResponse' table='[dbo].[FactDailyResponse]' type='table' />
+                          <relation name='DimAd' table='[dbo].[DimAd]' type='table' />
+                        </relation>
+                        <relation name='DimCampaign' table='[dbo].[DimCampaign]' type='table' />
+                      </relation>
+                      <relation name='DimClient' table='[dbo].[DimClient]' type='table' />
+                    </relation>
+                    <relation name='DimCreative' table='[dbo].[DimCreative]' type='table' />
+                  </relation>
+                  <relation name='DimDate' table='[dbo].[DimDate]' type='table' />
+                </relation>
+                <relation name='DimEvent' table='[dbo].[DimEvent]' type='table' />
+              </relation>
+              <relation name='DimPlacement' table='[dbo].[DimPlacement]' type='table' />
+            </relation>
+            <relation name='DimResponseType' table='[dbo].[DimResponseType]' type='table' />
+          </relation>
+          <relation name='DimVendor' table='[dbo].[DimVendor]' type='table' />
+        </relation>
+        <cols>
+          <map key='[Ad_Key]' value='[FactDailyResponse].[Ad_Key]' />
+          <map key='[Ad_Type_Name]' value='[DimPlacement].[Ad_Type_Name]' />
+          <map key='[AgencyTypes]' value='[DimClient].[AgencyTypes]' />
+          <map key='[BI_WEEKLY_1_DT]' value='[DimDate].[BI_WEEKLY_1_DT]' />
+          <map key='[BI_WEEKLY_1_KEY]' value='[DimDate].[BI_WEEKLY_1_KEY]' />
+          <map key='[BI_WEEKLY_2_DT]' value='[DimDate].[BI_WEEKLY_2_DT]' />
+          <map key='[BI_WEEKLY_2_KEY]' value='[DimDate].[BI_WEEKLY_2_KEY]' />
+          <map key='[Buy_Model_Name]' value='[DimPlacement].[Buy_Model_Name]' />
+          <map key='[CAMPAIGN_LAST_PL_END_DT]' value='[DimCampaign].[CAMPAIGN_LAST_PL_END_DT]' />
+          <map key='[CAMPAIGN_LEAST_PL_START_DT]' value='[DimCampaign].[CAMPAIGN_LEAST_PL_START_DT]' />
+          <map key='[Calculated Cost]' value='[FactDailyResponse].[Calculated Cost]' />
+          <map key='[Campaign_Country]' value='[DimCampaign].[Campaign_Country]' />
+          <map key='[Campaign_Key]' value='[FactDailyResponse].[Campaign_Key]' />
+          <map key='[Campaign_Location]' value='[DimCampaign].[Campaign_Location]' />
+          <map key='[Campaign_Name]' value='[DimCampaign].[Campaign_Name]' />
+          <map key='[Campaign_Region]' value='[DimCampaign].[Campaign_Region]' />
+          <map key='[Clicks]' value='[FactDailyResponse].[Clicks]' />
+          <map key='[Client_Country]' value='[DimClient].[Client_Country]' />
+          <map key='[Client_Id]' value='[DimPlacement].[Client_Id]' />
+          <map key='[Client_Key]' value='[FactDailyResponse].[Client_Key]' />
+          <map key='[Client_Location]' value='[DimClient].[Client_Location]' />
+          <map key='[Client_Name]' value='[DimClient].[Client_Name]' />
+          <map key='[Client_Network_Name]' value='[DimClient].[Client_Network_Name]' />
+          <map key='[Client_Region]' value='[DimClient].[Client_Region]' />
+          <map key='[Client_Url]' value='[DimClient].[Client_Url]' />
+          <map key='[Creative_Dimensions]' value='[DimCreative].[Creative_Dimensions]' />
+          <map key='[Creative_File_Name]' value='[DimCreative].[Creative_File_Name]' />
+          <map key='[Creative_File_Size]' value='[DimCreative].[Creative_File_Size]' />
+          <map key='[Creative_Key]' value='[FactDailyResponse].[Creative_Key]' />
+          <map key='[Creative_Message]' value='[DimCreative].[Creative_Message]' />
+          <map key='[Creative_Name]' value='[DimCreative].[Creative_Name]' />
+          <map key='[Creative_Type]' value='[DimCreative].[Creative_Type]' />
+          <map key='[Date_As_Int]' value='[DimDate].[Date_As_Int]' />
+          <map key='[Date_Key]' value='[FactDailyResponse].[Date_Key]' />
+          <map key='[Day_Of_Month_No]' value='[DimDate].[Day_Of_Month_No]' />
+          <map key='[Day_Of_Week_Short]' value='[DimDate].[Day_Of_Week_Short]' />
+          <map key='[Day_Of_week_Name]' value='[DimDate].[Day_Of_week_Name]' />
+          <map key='[DimAd_Ad_Key_1]' value='[DimAd].[Ad_Key]' />
+          <map key='[DimAd_Click_Through_URL]' value='[DimAd].[Click_Through_URL]' />
+          <map key='[DimAd_DFA_Ad_Name]' value='[DimAd].[DFA_Ad_Name]' />
+          <map key='[DimAd_DFA_Buy_Name]' value='[DimAd].[DFA_Buy_Name]' />
+          <map key='[DimAd_DFA_Creative_Name]' value='[DimAd].[DFA_Creative_Name]' />
+          <map key='[DimAd_DFA_Section_Name]' value='[DimAd].[DFA_Section_Name]' />
+          <map key='[DimAd_DFA_Site_Name]' value='[DimAd].[DFA_Site_Name]' />
+          <map key='[DimAd_PARSED_CITY]' value='[DimAd].[PARSED_CITY]' />
+          <map key='[DimAd_PARSED_COUNTRY]' value='[DimAd].[PARSED_COUNTRY]' />
+          <map key='[DimAd_PARSED_STATE]' value='[DimAd].[PARSED_STATE]' />
+          <map key='[DimCampaign_Campaign_Key]' value='[DimCampaign].[Campaign_Key]' />
+          <map key='[DimClient_Client_Key]' value='[DimClient].[Client_Key]' />
+          <map key='[DimCreative_Creative_Key]' value='[DimCreative].[Creative_Key]' />
+          <map key='[DimDate_Date_Key]' value='[DimDate].[Date_Key]' />
+          <map key='[DimEvent_Event_Key]' value='[DimEvent].[Event_Key]' />
+          <map key='[DimPlacement_Placement_Key]' value='[DimPlacement].[Placement_Key]' />
+          <map key='[DimResponseType_Response_Type_Key]' value='[DimResponseType].[Response_Type_Key]' />
+          <map key='[DimVendor_Vendor_Key]' value='[DimVendor].[Vendor_Key]' />
+          <map key='[Direct Itinerary Tix]' value='[FactDailyResponse].[Direct Itinerary Tix]' />
+          <map key='[Direct PNR]' value='[FactDailyResponse].[Direct PNR]' />
+          <map key='[Direct Sales]' value='[FactDailyResponse].[Direct Sales]' />
+          <map key='[Event_Key]' value='[FactDailyResponse].[Event_Key]' />
+          <map key='[Event_Type_Name]' value='[DimEvent].[Event_Type_Name]' />
+          <map key='[Full_SQL_Date]' value='[DimDate].[Full_SQL_Date]' />
+          <map key='[Impressions]' value='[FactDailyResponse].[Impressions]' />
+          <map key='[Indirect Itinerary Tix]' value='[FactDailyResponse].[Indirect Itinerary Tix]' />
+          <map key='[Indirect PNR]' value='[FactDailyResponse].[Indirect PNR]' />
+          <map key='[Indirect Sales]' value='[FactDailyResponse].[Indirect Sales]' />
+          <map key='[Month_Dt]' value='[DimDate].[Month_Dt]' />
+          <map key='[Month_Key]' value='[DimDate].[Month_Key]' />
+          <map key='[Month_Name]' value='[DimDate].[Month_Name]' />
+          <map key='[Month_Of_Year_No]' value='[DimDate].[Month_Of_Year_No]' />
+          <map key='[Month_Short]' value='[DimDate].[Month_Short]' />
+          <map key='[Month_of_Quarter_No]' value='[DimDate].[Month_of_Quarter_No]' />
+          <map key='[Package_Name]' value='[DimPlacement].[Package_Name]' />
+          <map key='[Placement_Dimensions]' value='[DimPlacement].[Placement_Dimensions]' />
+          <map key='[Placement_End_Dt]' value='[DimPlacement].[Placement_End_Dt]' />
+          <map key='[Placement_Key]' value='[FactDailyResponse].[Placement_Key]' />
+          <map key='[Placement_Name]' value='[DimPlacement].[Placement_Name]' />
+          <map key='[Placement_Start_Dt]' value='[DimPlacement].[Placement_Start_Dt]' />
+          <map key='[Platform_Name]' value='[DimPlacement].[Platform_Name]' />
+          <map key='[Pricing_Type_Name]' value='[DimPlacement].[Pricing_Type_Name]' />
+          <map key='[Quarter]' value='[DimDate].[Quarter]' />
+          <map key='[Response_Group]' value='[DimResponseType].[Response_Group]' />
+          <map key='[Response_Type]' value='[DimResponseType].[Response_Type]' />
+          <map key='[Response_Type_Key]' value='[FactDailyResponse].[Response_Type_Key]' />
+          <map key='[Spotlight_Category]' value='[DimEvent].[Spotlight_Category]' />
+          <map key='[Spotlight_Name]' value='[DimEvent].[Spotlight_Name]' />
+          <map key='[Spotlight_Note]' value='[DimEvent].[Spotlight_Note]' />
+          <map key='[Spotlight_Type]' value='[DimEvent].[Spotlight_Type]' />
+          <map key='[Spotlight_role]' value='[DimEvent].[Spotlight_role]' />
+          <map key='[Target_Market]' value='[DimPlacement].[Target_Market]' />
+          <map key='[Technology_Type_Name]' value='[DimCreative].[Technology_Type_Name]' />
+          <map key='[Unit_Type]' value='[DimPlacement].[Unit_Type]' />
+          <map key='[Vendor_Key]' value='[FactDailyResponse].[Vendor_Key]' />
+          <map key='[Vendor_Name]' value='[DimVendor].[Vendor_Name]' />
+          <map key='[Vendor_URL]' value='[DimVendor].[Vendor_URL]' />
+          <map key='[WEEK_KEY]' value='[DimDate].[WEEK_KEY]' />
+          <map key='[Week_Start_Mon_Dt]' value='[DimDate].[Week_Start_Mon_Dt]' />
+          <map key='[Week_Start_Sun_Dt]' value='[DimDate].[Week_Start_Sun_Dt]' />
+          <map key='[Year]' value='[DimDate].[Year]' />
+        </cols>
+        <refresh increment-key='' incremental-updates='false'>
+        </refresh>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Ad_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='datetime' hidden='true' name='[BI_WEEKLY_1_DT]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[BI_WEEKLY_1_KEY]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='datetime' hidden='true' name='[BI_WEEKLY_2_DT]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[BI_WEEKLY_2_KEY]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='real' default-format='p0.00%' name='[CTR]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Sum([Clicks])/Sum([Impressions])' scope-isolation='false' />
+      </column>
+      <column caption='Campaign Country' datatype='string' name='[Campaign_Country]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Campaign_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Client Country' datatype='string' name='[Client_Country]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Client_Id]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Client_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Client_City' datatype='string' name='[Client_Location]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Creative_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Date_As_Int]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Date_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Day_Of_Month_No]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='string' hidden='true' name='[Day_Of_Week_Short]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='string' hidden='true' name='[Day_Of_week_Name]' role='dimension' type='nominal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimAd_Ad_Key_1]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='City' datatype='string' name='[DimAd_PARSED_CITY]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+      </column>
+      <column caption='Country' datatype='string' name='[DimAd_PARSED_COUNTRY]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+      </column>
+      <column caption='Ad: State' datatype='string' name='[DimAd_PARSED_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimCampaign_Campaign_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimClient_Client_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimCreative_Creative_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimDate_Date_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimEvent_Event_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimPlacement_Placement_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimResponseType_Response_Type_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[DimVendor_Vendor_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Event_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='datetime' hidden='true' name='[Month_Dt]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Month_Key]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='string' hidden='true' name='[Month_Name]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Month_Of_Year_No]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='string' hidden='true' name='[Month_Short]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Month_of_Quarter_No]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Placement_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Quarter]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Response_Type_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='real' default-format='c&quot;$&quot;#,##0,.00K;(&quot;$&quot;#,##0,.00K)' name='[Total Sales]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Direct Sales]) + SUM([Indirect Sales])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' hidden='true' name='[Vendor_Key]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='string' hidden='true' name='[Vendor_Name (group) 1]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Vendor Name (group)' datatype='string' hidden='true' name='[Vendor_Name (group)]' role='dimension' type='nominal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[WEEK_KEY]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='datetime' hidden='true' name='[Week_Start_Mon_Dt]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='datetime' hidden='true' name='[Week_Start_Sun_Dt]' role='dimension' type='ordinal'>
+      </column>
+      <column datatype='integer' hidden='true' name='[Year]' role='measure' type='quantitative'>
+      </column>
+      <drill-paths>
+        <drill-path name='Client Hierarchy'>
+          <field>[Vendor_Name]</field>
+          <field>[Client_Network_Name]</field>
+          <field>[Client_Name]</field>
+          <field>[Campaign_Name]</field>
+          <field>[Placement_Name]</field>
+        </drill-path>
+      </drill-paths>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Users\ttu\Documents\Demo\WWReachDemo\v8 SQL Server .tde' schema='Extract' tablename='Extract' update-time='7/22/2013 1:42:16 PM' updated-database='C:\Users\russch.SIMPLE\Desktop\File Trading\_Temp\WWDemo\_WW Reach...tde'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[Ad_Type_Name]' value='[Extract].[Ad_Type_Name]' />
+            <map key='[AgencyTypes]' value='[Extract].[AgencyTypes]' />
+            <map key='[Buy_Model_Name]' value='[Extract].[Buy_Model_Name]' />
+            <map key='[CAMPAIGN_LAST_PL_END_DT]' value='[Extract].[CAMPAIGN_LAST_PL_END_DT]' />
+            <map key='[CAMPAIGN_LEAST_PL_START_DT]' value='[Extract].[CAMPAIGN_LEAST_PL_START_DT]' />
+            <map key='[Calculated Cost]' value='[Extract].[Calculated Cost]' />
+            <map key='[Campaign_Country]' value='[Extract].[Campaign_Country]' />
+            <map key='[Campaign_Location]' value='[Extract].[Campaign_Location]' />
+            <map key='[Campaign_Name]' value='[Extract].[Campaign_Name]' />
+            <map key='[Campaign_Region]' value='[Extract].[Campaign_Region]' />
+            <map key='[Clicks]' value='[Extract].[Clicks]' />
+            <map key='[Client_Country]' value='[Extract].[Client_Country]' />
+            <map key='[Client_Location]' value='[Extract].[Client_Location]' />
+            <map key='[Client_Name]' value='[Extract].[Client_Name]' />
+            <map key='[Client_Network_Name]' value='[Extract].[Client_Network_Name]' />
+            <map key='[Client_Region]' value='[Extract].[Client_Region]' />
+            <map key='[Client_Url]' value='[Extract].[Client_Url]' />
+            <map key='[Creative_Dimensions]' value='[Extract].[Creative_Dimensions]' />
+            <map key='[Creative_File_Name]' value='[Extract].[Creative_File_Name]' />
+            <map key='[Creative_File_Size]' value='[Extract].[Creative_File_Size]' />
+            <map key='[Creative_Message]' value='[Extract].[Creative_Message]' />
+            <map key='[Creative_Name]' value='[Extract].[Creative_Name]' />
+            <map key='[Creative_Type]' value='[Extract].[Creative_Type]' />
+            <map key='[DimAd_Click_Through_URL]' value='[Extract].[Click_Through_URL]' />
+            <map key='[DimAd_DFA_Ad_Name]' value='[Extract].[DFA_Ad_Name]' />
+            <map key='[DimAd_DFA_Buy_Name]' value='[Extract].[DFA_Buy_Name]' />
+            <map key='[DimAd_DFA_Creative_Name]' value='[Extract].[DFA_Creative_Name]' />
+            <map key='[DimAd_DFA_Section_Name]' value='[Extract].[DFA_Section_Name]' />
+            <map key='[DimAd_DFA_Site_Name]' value='[Extract].[DFA_Site_Name]' />
+            <map key='[DimAd_PARSED_CITY]' value='[Extract].[PARSED_CITY]' />
+            <map key='[DimAd_PARSED_COUNTRY]' value='[Extract].[PARSED_COUNTRY]' />
+            <map key='[DimAd_PARSED_STATE]' value='[Extract].[PARSED_STATE]' />
+            <map key='[Direct Itinerary Tix]' value='[Extract].[Direct Itinerary Tix]' />
+            <map key='[Direct PNR]' value='[Extract].[Direct PNR]' />
+            <map key='[Direct Sales]' value='[Extract].[Direct Sales]' />
+            <map key='[Event_Type_Name]' value='[Extract].[Event_Type_Name]' />
+            <map key='[Full_SQL_Date]' value='[Extract].[Full_SQL_Date]' />
+            <map key='[Impressions]' value='[Extract].[Impressions]' />
+            <map key='[Indirect Itinerary Tix]' value='[Extract].[Indirect Itinerary Tix]' />
+            <map key='[Indirect PNR]' value='[Extract].[Indirect PNR]' />
+            <map key='[Indirect Sales]' value='[Extract].[Indirect Sales]' />
+            <map key='[Number of Records]' value='[Extract].[Number of Records]' />
+            <map key='[Package_Name]' value='[Extract].[Package_Name]' />
+            <map key='[Placement_Dimensions]' value='[Extract].[Placement_Dimensions]' />
+            <map key='[Placement_End_Dt]' value='[Extract].[Placement_End_Dt]' />
+            <map key='[Placement_Name]' value='[Extract].[Placement_Name]' />
+            <map key='[Placement_Start_Dt]' value='[Extract].[Placement_Start_Dt]' />
+            <map key='[Platform_Name]' value='[Extract].[Platform_Name]' />
+            <map key='[Pricing_Type_Name]' value='[Extract].[Pricing_Type_Name]' />
+            <map key='[Response_Group]' value='[Extract].[Response_Group]' />
+            <map key='[Response_Type]' value='[Extract].[Response_Type]' />
+            <map key='[Spotlight_Category]' value='[Extract].[Spotlight_Category]' />
+            <map key='[Spotlight_Name]' value='[Extract].[Spotlight_Name]' />
+            <map key='[Spotlight_Note]' value='[Extract].[Spotlight_Note]' />
+            <map key='[Spotlight_Type]' value='[Extract].[Spotlight_Type]' />
+            <map key='[Spotlight_role]' value='[Extract].[Spotlight_role]' />
+            <map key='[Target_Market]' value='[Extract].[Target_Market]' />
+            <map key='[Technology_Type_Name]' value='[Extract].[Technology_Type_Name]' />
+            <map key='[Unit_Type]' value='[Extract].[Unit_Type]' />
+            <map key='[Vendor_Name]' value='[Extract].[Vendor_Name]' />
+            <map key='[Vendor_URL]' value='[Extract].[Vendor_URL]' />
+          </cols>
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='3814026' timestamp-start='2013-07-22 13:42:16.262000' />
+          </refresh>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.473517' group-percentage='0.121822' measure-ordering='alphabetic' measure-percentage='0.404661' show-hidden-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='144' name='Sheet 1' width='174'>
+      iVBORw0KGgoAAAANSUhEUgAAAK4AAACQCAIAAAAeHsdkAAAAA3NCSVQICAjb4U/gAAAACXBI
+      WXMAAA7EAAAOxAGVKw4bAAABQElEQVR4nO3SMQHAMAzAsKz8OWePObSHhMCHv90dmDm3A3iF
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWIFYgViBWI
+      FYgViBWIFYgViBWIFcgP9eEEHcxAtUgAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
